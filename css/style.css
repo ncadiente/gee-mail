@@ -1,0 +1,19 @@
+.email{
+	display:block;
+}
+
+.date{
+	display:inline;
+}
+
+.subject:{
+	display:inline;
+}
+
+.sender{
+	display:inline;
+}
+
+.body{
+	display:none;
+}

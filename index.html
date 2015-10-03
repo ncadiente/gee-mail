@@ -10,26 +10,21 @@
         function printEmail(email){
         	var emailBox=document.createElement('div');
                 emailBox.className="email";
-                emailBox.style.display="block";
         	var dateBox=document.createElement('div');
         		dateBox.innerHTML=email.date;
                 dateBox.className="date";
-                dateBox.style.display="inline";
                 emailBox.appendChild(dateBox);
         	var subjectBox=document.createElement('div');
         		subjectBox.innerHTML=email.subject;
                 subjectBox.className="subject";
-                subjectBox.style.display="inline";
                 emailBox.appendChild(subjectBox);
         	var senderBox=document.createElement('div');
         		senderBox.innerHTML=email.sender;
                 senderBox.className="sender";
-                senderBox.style.display="inline";
                 emailBox.appendChild(senderBox);
         	var bodyBox=document.createElement('div');
         		bodyBox.innerHTML=email.body;
                 bodyBox.className="body";
-                bodyBox.style.display="none";
                 emailBox.appendChild(bodyBox);
             var newLine=document.createElement("br");
                 emailBox.appendChild(newLine);
@@ -47,35 +42,31 @@
      	printEmail(window.geemails[i]);
         };
         
-        var emailCounter=document.createElement("span");
         var emailCount=(window.geemails.length);
-        emailCounter.innerHTML=emailCount;
         var header=document.getElementById("myHeader");
-        header.innerHTML=emailCounter;
+        header.innerHTML=emailCount;
+        var newEmails= document.createElement("span");
+        newEmails.innerHTML= " New Emails";
+        header.appendChild(newEmails);
 
         function addMessage(email){
             var emailBox=document.createElement('div');
                 emailBox.className="email";
-                emailBox.style.display="block";
             var dateBox=document.createElement('div');
                 dateBox.innerHTML=email.date;
                 dateBox.className="date";
-                dateBox.style.display="inline";
                 emailBox.appendChild(dateBox);
             var subjectBox=document.createElement('div');
                 subjectBox.innerHTML=email.subject;
                 subjectBox.className="subject";
-                subjectBox.style.display="inline";
                 emailBox.appendChild(subjectBox);
             var senderBox=document.createElement('div');
                 senderBox.innerHTML=email.sender;
                 senderBox.className="sender";
-                senderBox.style.display="inline";
                 emailBox.appendChild(senderBox);
             var bodyBox=document.createElement('div');
                 bodyBox.innerHTML=email.body;
                 bodyBox.className="body";
-                bodyBox.style.display="none";
                 emailBox.appendChild(bodyBox);
             var newLine=document.createElement("br");
                 emailBox.appendChild(newLine);

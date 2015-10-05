@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -12,7 +11,7 @@
                 emailBox.className="email";
         	var dateBox=document.createElement('div');
         		dateBox.innerHTML=email.date;
-                dateBox.className="date";
+                dateBox.className="recDate";
                 emailBox.appendChild(dateBox);
         	var subjectBox=document.createElement('div');
         		subjectBox.innerHTML=email.subject;
@@ -41,12 +40,21 @@
         for (var i=0; i<window.geemails.length; i++){
      	printEmail(window.geemails[i]);
         };
-        
-        var emailCount=(window.geemails.length);
         var header=document.getElementById("myHeader");
-        header.innerHTML=emailCount;
+        var headSpace=document.createElement("div");
+        headSpace.id="headSpace";
+        header.appendChild(headSpace);
+
+        var emailCount=(window.geemails.length);
+        var emailCounter=document.createElement("span");
+        emailCounter.className="emailCounter";
+        emailCounter.id="emailNumber"
+        emailCounter.innerHTML=emailCount;
+        header.appendChild(emailCounter);
+
         var newEmails= document.createElement("span");
-        newEmails.innerHTML= " New Emails";
+        newEmails.className="emailCounter";
+        newEmails.innerHTML= "G-mails";
         header.appendChild(newEmails);
 
         function addMessage(email){
@@ -54,7 +62,7 @@
                 emailBox.className="email";
             var dateBox=document.createElement('div');
                 dateBox.innerHTML=email.date;
-                dateBox.className="date";
+                dateBox.className="recDate";
                 emailBox.appendChild(dateBox);
             var subjectBox=document.createElement('div');
                 subjectBox.innerHTML=email.subject;
@@ -81,17 +89,20 @@
             
 
         }
-        
-        setInterval(function(){
-            addMessage(getNewMessage());
-            emailCount +=1;
 
+
+        
+       setInterval(function(){
+            addMessage(getNewMessage());
+            emailCount += 1;
+            emailCounter.innerHTML= emailCount;
         }, 10000);
 
         
         
       };
     </script>
+    <link href="css/style.css" rel="stylesheet" media="screen">
 	</head>
 	<body>
     <header id="myHeader">

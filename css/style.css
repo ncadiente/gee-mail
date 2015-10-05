@@ -1,13 +1,62 @@
+
+
+
+header{
+	background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTOxJQowB5wHgJURK7FhmDlxr6xYZzXcvZxud2Rqaji6VVU4Cuu_w');
+	height:225px;
+}
+
+body{
+	background-image: url(http://users2.ml.mindenkilapja.hu/users/carsite/uploads/WallpaperLowRider.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}	
+
+#headSpace{
+	background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZMikiDBwv2MobrccHtG1GYq5znkMKTlI-ifTRLSOhV4_b_9qvgg);
+	background-repeat: no-repeat;
+	height:170px;
+	width:195px;
+	border-radius: 25px;
+	margin-bottom: 10px;
+}
+.emailCounter{
+	font-size:xx-large;
+	color:white;
+	background:gray;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 2px;
+	text-align: ;
+	margin-top: 5px;
+}
+
+#emailNumber{
+	border-radius:25px;
+}
+
+
 .email{
-	display:block;
+	display: block;
+	background-color: #ffffff;
+	opacity: 0.6;
+	border-spacing:10px;
+	border-radius:5px;
+	margin: 3px;
+	font-family:"Comic Sans MS", cursive, sans-serif;
 }
 
-.date{
+
+.recDate{
 	display:inline;
+	margin-right: 15px;
 }
 
-.subject:{
+.subject{
 	display:inline;
+	font-weight: bold;
+	margin-right: 15px;
+
 }
 
 .sender{
